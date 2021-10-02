@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int iOz = 0;
+    int iVolumeOfCup = 8;
+
+    printf("How many oz do you want?\n");
+    scanf("%d", &iOz);
+    int iCup = iOz % iVolumeOfCup;
+    if (iCup == 0)
+    {
+        int result = iOz / iVolumeOfCup;
+        printf("You need %d cups.\n", result);
+    }
+    else {
+         int result = (iOz / iVolumeOfCup)+1;
+        printf("You need %d cups.\n", result );
+    }
+    
+    return 0;
+}
