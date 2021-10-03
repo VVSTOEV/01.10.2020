@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void)
+{
+    float fJupiterYear = 12 * 365; // number of days of jupiter year
+    float fJupiterDay = 1 / fJupiterYear;
+    float fRequest = 0;
+
+
+    printf("Insert number of Earth days\n");
+    scanf("%f", &fRequest);
+    float fResult = fRequest * fJupiterDay;
+    printf("%.0f Earth days = %.6f of Jupiter year.  \n", fRequest, fResult);
+
+    return 0;
+}
