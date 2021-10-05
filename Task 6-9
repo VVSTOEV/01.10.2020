@@ -1,0 +1,90 @@
+#include <stdio.h>
+
+int main(void)
+{
+
+    // Задача 6
+    // Дефинирайте променливи със стойност:
+    // -127,
+    // 255,
+    // 63 498,
+    // 4 294 967 292,
+    // -9 000 000 000 000 775 845
+
+    printf("\t\tTask 6:\n\n");
+
+    char a0 = -127;
+    printf("- Char: %d\n\n", a0);
+
+    unsigned char a1 = 255;
+    printf("- Unsigned char: %d\n\n", a1);
+
+    unsigned short int a2 = 63498;
+    printf("- Unsigned short int: %hu\n\n", a2);
+
+    unsigned int a3 = 4294967292;
+    printf("- Unsigned  int: %u\n\n", a3);
+
+    long long int a4 = -9000000000000775845;
+    printf("- Unsigned  int: %lld\n\n", a4);
+
+    // Задача 7
+    // Дефинирайте променливи със стойност:
+    // 24 212,
+    // -1 357 674,
+    // 1 357 674,
+    // -1 357 674 000,
+    // 3 657 895 000.
+    // Изведете всяка променлива на екрана със printf()
+
+    printf("\t\tTask 7:\n\n");
+
+    short int a5 = 24212;
+    printf("- Short int: %hd\n\n", a5);
+
+    int a6 = -1357674;
+    printf("- Int: %d\n\n", a6);
+
+    int a7 = 1357674;
+    printf("- Int: %d\n\n", a7);
+
+    int a8 = 1357674000;
+    printf("- Int: %d\n\n", a8);
+
+    unsigned int a9 = 3657895000;
+    printf("- Unsigned int: %u\n\n", a9);
+
+    //    Задача 8
+    // Каква ще бъде стойността на x?
+
+    printf("\t\tTask 8:\n\n");
+
+    char x = 8;
+    x = x - 2;
+    x = x + 6;
+    x = x - 10 + 2;
+
+    printf("char x = 8;\nx = x - 2;\nx = x + 6;\nx = x - 10 + 2;\n\n");
+    printf("Value of 'x' is: %d\n\n", x);
+
+    //    Задача 9
+    // Дефинирайте променливи със стойност:
+    // 4.9876543,
+    // 7.123456789012345678890,
+    // 18 398 458 438 583 853.28,
+    // 18 398 458 438 583 853.39875937284928422.
+
+    printf("\t\tTask 9:\n\n");
+
+    double a10 = 4.9876543;
+    printf("- Double: %.7lf\n\n", a10);
+
+    double a11 = 7.123456789012345678890;
+    printf("- Double:%.20Lf\n\n", a11);
+    
+    double a12 = 18398458438583853.28;
+    printf("- Double: %.2lf\n\n", a12);
+
+    double a13 = 18398458438583853.39875937284928422;
+    printf("- Double: %.17lf\n\n", a13);
+}
