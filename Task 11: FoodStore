@@ -1,0 +1,77 @@
+#include <stdio.h>
+
+
+// Warning: This program is not ready and made for exampoe but has full funcionality.
+// You can use 1,2 and 5 items in food menu.
+
+int main()
+{
+
+    float fTomatPrice = 4.5f;       // for 1 kg      iUserFoodChoice = 1
+    float fCandyPrice = 1.5f;      // for 1 kg      iUserFoodChoice = 2
+    float fFlourPrice = 1.8f;      // for 1 kg      iUserFoodChoice = 3
+    float fYoghurtPrice = 0.5f;    // for 1 item    iUserFoodChoice = 4
+    float fIcecreamPrice = 0.6f;   // for 1 item    iUserFoodChoice = 5
+    float fLollipopsPrice = 0.15f; // for 1 item    iUserFoodChoice = 6
+
+    float fTomatoesWeight = 0.0f;
+    float fCandyWeight = 0.0f;
+    float fFlourWeight = 0.0f;
+    int iYoghurtCount = 0;
+    int iIcecreamCount = 0;
+    int iLollipopsCount = 0;
+    int exit = 0;
+    int exitChoice = 0;
+
+    float fTotalPrice = 0.0f;
+
+    int iUserFoodChoice = 0;
+    
+    while (exit == 0)
+    {
+        printf("\nGo shoping - enter '1'\nExit - enter '2'\n");
+        scanf("%d", &exitChoice);
+        if (exitChoice == 1)
+        {
+            while (iUserFoodChoice != 333)
+            {
+
+                printf("Select food:\n\t'Tomatoes' \t- enter '1'\n\t'Flour' \t- enter '2'\n\t'Candy' \t- enter '3'\n\t'Yoghurt' \t- enter '4'\n\t'Icecream' \t- enter '5'\n\t'Lollipops' \t- enter '6'\n\n\t'EXIT from store' \t- enter '333'\n");
+                scanf("%d", &iUserFoodChoice);
+                switch (iUserFoodChoice)
+                {
+                case 1:
+                    printf("Enter weight of 'Tomatoes' in kg:");
+                    scanf("%f", &fTomatoesWeight);
+                    fTotalPrice += fTomatPrice * fTomatoesWeight;
+                    break;
+                case 2:
+                    printf("Enter weight of 'Candies' in kg:");
+                    scanf("%f", &fCandyWeight);
+                    fTotalPrice += fCandyPrice * fCandyWeight;
+                    break;
+
+                case 5:
+                    printf("Enter number of 'Icecreams':");
+                    scanf("%d", &iIcecreamCount);
+                    fTotalPrice += fIcecreamPrice * iIcecreamCount;
+                    break;
+                default:
+                    break;
+                }
+            }
+        }
+        else if (exitChoice == 2)
+        {
+            break;
+        }
+        else
+        {
+            printf("Wrong number.\nPlease, enter only '1' or '2'\n");
+        }
+    }
+
+    printf("Total price for your basket is: %.2f BGN\n", fTotalPrice);
+
+    return 0;
+}
