@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main(void)
+{
+    char cCampers = 3;
+    char cCaravas = 3;
+    unsigned short int iCamperPrice = 100;
+    unsigned short int iCaravanPrice = 90;
+    unsigned short int iItemPrice = 0;
+    unsigned int iTotalPrice = 0;
+    unsigned short int iNights = 0;
+    char cUserChoice = 0;
+    char isDone = 0;
+    printf("Available:\n\n\t1. Campers - '%d' at a price of BGN %d per night\n\n\t2. Caravans - '%d' at a price of BGN %d per night.\n\n", cCampers, iCamperPrice, cCaravas, iCaravanPrice);
+    printf("Please, make a choice:\n\n\t1. For Campers press > 1 <\n\n\t2. For Caravans press > 2 <\n");
+    while (isDone == 0)
+    {
+        scanf("%d", &cUserChoice);
+        if (cUserChoice == 1)
+        {
+            iItemPrice = iCamperPrice;
+            isDone = 1;
+        }
+        else if (cUserChoice == 2)
+        {
+            iItemPrice = iCaravanPrice;
+            isDone = 1;
+        }
+        else
+        {
+            printf("Wrong number.\n\nPlease, select only from '1' or '2'\n");
+        }
+    }
+    printf("Please insert number of nights:\n");
+    scanf("%d", &iNights);
+    iTotalPrice = iItemPrice * iNights;
+    printf("Your price is: %d BGN\n", iTotalPrice);
+
+    return 0;
+}
