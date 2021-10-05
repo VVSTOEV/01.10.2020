@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void){
+
+printf("How many seconds in the year?\n\n");
+
+int iYearDays = 365;
+int iDayHours = 24;
+int iHourMinutes =60;
+int  iMinute = 60;
+int result = iMinute*iHourMinutes* iDayHours*iYearDays;
+
+printf("Ta-da-am: %d seconds!\n", result);
+
+
+    return 0;
+}
