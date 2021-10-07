@@ -1,0 +1,38 @@
+// TAsk 14-15
+
+#include <stdio.h>
+
+int gVar = 0;
+int test(void);
+int test2(void);
+
+int main(void)
+{
+
+    static int sVar = 0;
+    for (int i = 0; i < 3; i++)
+    {
+        test();
+    }
+
+    printf("%d\n", gVar);
+
+    for (int i = 0; i < 3; i++)
+    {
+        test2();
+    }
+    
+    printf("%d\n", sVar);
+
+    return 0;
+}
+
+int test()
+{
+    return gVar++;
+}
+
+int test2()
+{
+    return sVar++;
+}
