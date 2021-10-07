@@ -1,0 +1,74 @@
+// TAsk 18
+
+#include <stdio.h>
+
+int main(void)
+{
+    char cCampers = 3;
+    char cCaravans = 3;
+    unsigned short int iCamperPrice = 100;
+    unsigned short int iCaravanPrice = 90;
+    unsigned short int iItemPrice = 0;
+    unsigned int iTotalPrice = 0;
+    unsigned short int iNights = 0;
+    char cUserChoice = 0;
+    char isDone = 0;
+
+    while (isDone == 0)
+    {
+        printf("\nMake an order - enter '1'\nExit - enter '2'\n");
+        scanf("%d", &cUserChoice);
+        if (cUserChoice == 1)
+        {
+            printf("Available:\n\n\t1. Campers - '%d' at a price of BGN %d per night\n\n\t2. Caravans - '%d' at a price of BGN %d per night.\n\n", cCampers, iCamperPrice, cCaravans, iCaravanPrice);
+            printf("Please, make a choice:\n\n\t1. For Campers enter > 1 <\n\n\t2. For Caravans enter > 2 <\n3. For EXIT enter > 3 <\n");
+            while (isDone == 0)
+            {
+                scanf("%d", &cUserChoice);
+                if (cUserChoice == 1)
+                {
+                    iItemPrice = iCamperPrice;
+                    cCampers--;
+                    printf("Please insert number of nights:\n");
+                    scanf("%d", &iNights);
+                    iTotalPrice = iItemPrice * iNights;
+                    printf("\n\nYour current price is: %d BGN\n", iTotalPrice);
+                    printf("\n\n\nAvailable:\n\n\t1. Campers - '%d' at a price of BGN %d per night\n\n\t2. Caravans - '%d' at a price of BGN %d per night.\n\n", cCampers, iCamperPrice, cCaravans, iCaravanPrice);
+                    printf("Please, make a choice:\n\n\t1. For Campers enter > 1 <\n\n\t2. For Caravans enter > 2 <\n3. For EXIT enter > 3 <\n");
+                    
+                }
+                else if (cUserChoice == 2)
+                {
+                    iItemPrice = iCaravanPrice;
+                    cCaravans--; //for the future conditions
+                    printf("Please insert number of nights:\n");
+                    scanf("%d", &iNights);
+                    iTotalPrice = iItemPrice * iNights;
+                    printf("\n\nYour current price is: %d BGN\n", iTotalPrice);
+                    printf("\n\n\nAvailable:\n\n\t1. Campers - '%d' at a price of BGN %d per night\n\n\t2. Caravans - '%d' at a price of BGN %d per night.\n\n", cCampers, iCamperPrice, cCaravans, iCaravanPrice);
+                    printf("Please, make a choice:\n\n\t1. For Campers enter > 1 <\n\n\t2. For Caravans enter > 2 <\n3. For EXIT enter > 3 <\n");
+                    
+                }
+                else if (cUserChoice == 3)
+                {
+                    break;
+                }
+                else
+                {
+                    printf("Wrong number.\n\nPlease, select only from '1', '2' or '3'\n");
+                }
+            }
+        }
+        else if (cUserChoice == 2)
+        {
+            break;
+        }
+        else
+        {
+            printf("Wrong number.\n\nPlease, select only from '1' or '2'\n");
+        }
+    }
+    printf("\n\nYour total price is: %d BGN\n", iTotalPrice);
+
+    return 0;
+}
