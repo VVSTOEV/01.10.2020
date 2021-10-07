@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main(void){
+
+char str[]="HELLO";
+int i=0;
+while(str[i] !='\0'){
+
+    switch (str[i])
+    {
+    case 'H': str[i]='h';
+        break;
+    case 'E': str[i]='e';
+        break;
+    
+    case 'L': str[i]='l';
+        break;
+    case 'O': str[i]='o';
+        break;
+    
+    default:
+        break;
+    }
+    printf("%c", str[i]);
+    i++;
+}
+
+
+
+    return 0;
+}
