@@ -1,0 +1,44 @@
+// TAsk 16-17
+
+#include <stdio.h>
+#include <math.h>
+
+const float fPi = M_PI;
+double cSqr(double, float);
+double dCircleSqr = 0.0;
+double sqr(double, float);         // circle area function
+double eSqr(double, float, float); // ellipse area function
+double dEllipseSqr = 0.0;
+
+int main(void)
+{
+    float fRad1 = 1;
+    float fRad2 = 1.5;
+    float fRad3 = 13;
+    cSqr(fPi, fRad1);
+    printf("The area of a circle with radius %.1f is equal %lf\n", fRad1, dCircleSqr);
+    cSqr(fPi, fRad2);
+    printf("The area of a circle with radius %.1f is equal %lf\n", fRad2, dCircleSqr);
+    cSqr(fPi, fRad3);
+    printf("The area of a circle with radius %.1f is equal %lf\n", fRad3, dCircleSqr);
+
+    float fEllipseRad1 = 5.6;
+    float fEllipseRad2 = 2.3;
+    eSqr(fPi, fEllipseRad1, fEllipseRad2);
+    printf("The area of a ellipse with radiuses %.1f and %.1f is equal %lf\n", fEllipseRad1, fEllipseRad2, dEllipseSqr);
+
+    return 0;
+}
+
+double cSqr(double a, float b)
+{
+    dCircleSqr = a * b * b;
+    return dCircleSqr;
+}
+
+double eSqr(double a, float b, float c)
+{
+
+    dEllipseSqr = a * b * c;
+    return dEllipseSqr;
+}
